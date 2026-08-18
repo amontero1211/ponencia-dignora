@@ -39,7 +39,7 @@
       <ul class="contacto__lista">
         <li class="contacto__item">
           <svg class="contacto__icono" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M2 4h20v16H2V4zm2 2v.01L12 12l8-5.99V6H4zm16 2.24l-7.4 5.55a1 1 0 0 1-1.2 0L4 8.24V18h16V8.24z"/></svg>
-          <a class="contacto__link" href="mailto:dignoraavarullo@gmail.com">dignoraavarullo@gmail.com</a>
+          <button class="contacto__link contacto__link--email" id="email-link" type="button">Mostrar email</button>
         </li>
         <li class="contacto__item">
           <svg class="contacto__icono" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM8.5 7.5a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zM10 9h2.2v9H10V9zm3.9 0h2.1v1.23h.03c.29-.55 1-1.13 2.07-1.13 2.22 0 2.63 1.46 2.63 3.36V18h-2.2v-4.13c0-.98-.02-2.25-1.37-2.25-1.37 0-1.58 1.07-1.58 2.18V18h-2.2V9z"/></svg>
@@ -97,5 +97,22 @@
     </section>
 
   </main>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('email-link');
+      btn.addEventListener('click', function () {
+        fetch('/.netlify/functions/email')
+          .then(function (r) { return r.json(); })
+          .then(function (data) {
+            var link = document.createElement('a');
+            link.className = 'contacto__link';
+            link.href = 'mailto:' + data.email;
+            link.textContent = data.email;
+            btn.replaceWith(link);
+          });
+      });
+    })();
+  </script>
 </body>
 </html>

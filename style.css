@@ -33,6 +33,12 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+p {
+  text-align: justify;
+  text-align-last: left;
+  hyphens: auto;
+}
+
 .page {
   max-width: 620px;
   margin: 0 auto;
@@ -77,8 +83,9 @@ body {
 
 .header-ponente {
   display: flex;
-  align-items: center;
-  gap: 1.25rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
   animation: rise 0.5s ease-out both;
 }
 
@@ -114,13 +121,11 @@ body {
   font-weight: 500;
   font-style: italic;
   color: var(--ink-soft);
-  max-width: 56ch;
 }
 
 .bio__texto {
   margin: 0;
   font-size: 1.02rem;
-  max-width: 54ch;
 }
 
 .bio__texto + .bio__texto {
@@ -161,9 +166,15 @@ body {
   border-color: var(--accent);
 }
 
+.contacto__link--email {
+  font: inherit;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
 .resumen__texto {
   margin: 0;
-  max-width: 60ch;
 }
 
 .referencias__lista {
@@ -253,6 +264,8 @@ a:focus-visible,
   }
 
   .header-ponente {
+    flex-direction: row;
+    align-items: center;
     gap: 1.75rem;
   }
 
