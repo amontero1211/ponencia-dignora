@@ -139,3 +139,18 @@ body {
 .referencias__item a:focus {
   text-decoration: underline;
 }
+
+@media (min-width: 640px) {
+  .page {
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  .header-ponente__foto {
+    width: 150px;
+    height: 150px;
+  }
+
+  .header-ponente__nombre {
+    font-size: 1.9rem;
+  }
+}
