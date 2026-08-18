@@ -32,3 +32,27 @@ body {
 .page section:last-child {
   margin-bottom: 0;
 }
+
+.header-ponente {
+  text-align: center;
+}
+
+.header-ponente__foto {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--color-border);
+}
+
+.header-ponente__nombre {
+  margin: 0.75rem 0 0.25rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.header-ponente__cargo {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
