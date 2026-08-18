@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Foto del ponente (placeholder)">
-  <rect width="200" height="200" fill="#e2e8f0"/>
-  <circle cx="100" cy="80" r="40" fill="#94a3b8"/>
-  <path d="M40 180c0-40 27-65 60-65s60 25 60 65" fill="#94a3b8"/>
+  <rect width="200" height="200" fill="#e9e2d0"/>
+  <circle cx="100" cy="80" r="40" fill="#a6957a"/>
+  <path d="M40 180c0-40 27-65 60-65s60 25 60 65" fill="#a6957a"/>
 </svg>
