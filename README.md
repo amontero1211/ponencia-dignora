@@ -6,18 +6,29 @@ Página estática de una sola pantalla con los datos del ponente y las referenci
 
 Abrir `index.html` y buscar los comentarios `<!-- REEMPLAZAR: ... -->`. Reemplazar el texto indicado por el contenido real:
 
-- Foto: reemplazar `assets/foto-ponente-placeholder.svg` por una imagen real (jpg/png) y actualizar el `src` del `<img>` en la sección `header-ponente`.
+- Foto: reemplazar `public/assets/profile.png` por una imagen real (jpg/png) y actualizar el `src` del `<img>` en la sección `header-ponente`.
 - Nombre, cargo, bio, contacto y resumen: reemplazar el texto entre los comentarios.
 - Referencias: cada `<li class="referencias__item">` tiene una cita y un link a DOI/URL. Copiar/pegar el bloque `<li>` para agregar más referencias, o borrar los que sobren.
 
-## Ver localmente
+## Desarrollo local
 
 ```bash
-open index.html
+npm install
+npm run dev
 ```
+
+## Build
+
+```bash
+npm run build
+```
+
+Genera `dist/` con `index.html` y `style.css` hasheado para cache-busting automático (Vite reescribe el nombre del archivo en cada build según su contenido).
 
 ## Deploy
 
-Subir los 3 archivos (`index.html`, `style.css`, `assets/`) a cualquier hosting estático (Netlify, Vercel, etc.). No requiere build ni configuración adicional.
+Netlify está configurado (`netlify.toml`) para correr `npm run build` y publicar `dist/`. Al hacer push, el deploy se dispara solo.
+
+Para otro hosting estático: correr `npm run build` y subir el contenido de `dist/`.
 
 Una vez publicada, generar el código QR apuntando a la URL final del deploy.
