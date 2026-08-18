@@ -98,3 +98,13 @@ body {
 .contacto__link:focus {
   text-decoration: underline;
 }
+
+.resumen__titulo {
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem;
+}
+
+.resumen__texto {
+  margin: 0;
+  color: var(--color-text);
+}
