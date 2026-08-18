@@ -107,10 +107,24 @@ body {
   color: var(--ink-soft);
 }
 
+.ponencia__titulo {
+  margin: 1.1rem 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 2vw + 0.6rem, 1.3rem);
+  font-weight: 500;
+  font-style: italic;
+  color: var(--ink-soft);
+  max-width: 56ch;
+}
+
 .bio__texto {
   margin: 0;
   font-size: 1.02rem;
   max-width: 54ch;
+}
+
+.bio__texto + .bio__texto {
+  margin-top: 0.7rem;
 }
 
 .contacto__lista {
