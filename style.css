@@ -62,3 +62,39 @@ body {
   font-size: 1rem;
   color: var(--color-text);
 }
+
+.contacto__titulo {
+  font-size: 1.1rem;
+  margin: 0 0 0.75rem;
+}
+
+.contacto__lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.contacto__item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.contacto__icono {
+  flex-shrink: 0;
+  color: var(--color-accent);
+}
+
+.contacto__link {
+  color: var(--color-accent);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.contacto__link:hover,
+.contacto__link:focus {
+  text-decoration: underline;
+}
